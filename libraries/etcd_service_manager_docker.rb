@@ -9,7 +9,7 @@ module EtcdCookbook
     property :port, default: ['2379/tcp4:2379', '4001/tcp4:4001']
     property :network_mode, String, default: 'host'
 
-    if tag[1].to_i > 2
+    if new_resource.tag[1].to_i > 2
       etcd_command = '/usr/local/bin/etcd' + etcd_daemon_opts.join(' ').strip
     else
       etcd_command = etcd_daemon_opts.join(' ').strip
