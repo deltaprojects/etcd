@@ -39,6 +39,7 @@ module EtcdCookbook
     property :discovery_srv, String, desired_state: false
     property :discovery_fallback, String, desired_state: false
     property :discovery_proxy, String, desired_state: false
+    property :auto_compaction_retention, Integer, desired_state: false
 
     # Proxy Flags
     property :proxy, String, desired_state: false
